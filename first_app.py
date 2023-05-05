@@ -60,7 +60,7 @@ def main():
     Senior_Citizen = st.text_input('Are you a senior citizen?')
     Partner = st.text_input('Got Partner?')
     Dependents = st.text_input('Got Dependents?')
-    tenure_group = st.text_input('tenure_group?')
+    
 
     
     
@@ -77,7 +77,7 @@ def main():
                                      Tech_Support,Streaming_TV,Streaming_Movies,
                                      Contract,Paperless_Billing,Payment_Method,
                                      Monthly_Charges,Total_Charges,Gender,
-                                     Senior_Citizen,Partner,Dependents,tenure_group])
+                                     Senior_Citizen,Partner,Dependents])
     
     st.success(diagnosis)
     
