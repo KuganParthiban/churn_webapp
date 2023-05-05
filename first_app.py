@@ -42,22 +42,22 @@ def main():
     
     #getting the input data from the user
     
-    MonthlyCharges = st.text_input('MonthlyCharges How Much?')
+    Monthly_Charges = st.text_input('Monthly Charges How Much?')
     
-    TotalCharges = st.text_input('TotalCharges how much?')
+    Total_Charges = st.text_input('Total Charges how much?')
     
     Phone_Service_Yes = st.text_input('Phone_Service_Yes? If yes answer 1 else 0')
     
-    Multiple_Line_Nophoneservice = st.text_input('Multiple_Line_No phone service?if no answer 1 else 0')
+    Multiple_Line_No_phone_service = st.text_input('Multiple_Line_No phone service?if no answer 1 else 0')
     
     Multiple_Line_Yes = st.text_input('Got online backup?0 or 1')
     
     
-    Internet_Service_Fiberoptic = st.text_input('Internet_Service_Fiber optic?0 or 1')
+    Internet_Service_Fiber_optic = st.text_input('Internet_Service_Fiber optic?0 or 1')
     
     Internet_Service_No = st.text_input('Internet_Service_No? no is 1 yes 0')
     
-    Online_Security_Nointernetservice = st.text_input('Online_Security_No internet service?no is 1 yes 0')
+    Online_Security_No_internet_service = st.text_input('Online_Security_No internet service?no is 1 yes 0')
     
     Online_Security_Yes = st.text_input('Online_Security_Yes? yes 1 no 0')
         
@@ -81,19 +81,19 @@ def main():
     
     StreamingMovies_Yes = st.text_input('StreamingMovies_Yes?')
     
-    StreamingMovies_Nointernetservice = st.text_input('StreamingMovies_No internet service?')
+    StreamingMovies_No_internet_service = st.text_input('StreamingMovies_No internet service?')
             
-    Contract_Oneyear = st.text_input('Contract_One year? if yes 1 no 0')
+    Contract_One_year = st.text_input('Contract_One year? if yes 1 no 0')
     
-    Contract_Twoyear = st.text_input('Contract_Two year?')
+    Contract_Two_year = st.text_input('Contract_Two year?')
     
     PaperlessBilling_Yes = st.text_input('PaperlessBilling_Yes?')
     
     PaymentMethod_Creditcard_automatic = st.text_input('PaymentMethod_Creditcardautomati?')
     
-    PaymentMethod_Electroniccheck = st.text_input('PaymentMethod_Electroniccheck?')
+    PaymentMethod_Electronic_check = st.text_input('PaymentMethod_Electroniccheck?')
       
-    PaymentMethod_Mailedcheck = st.text_input('tPaymentMethod_Mailedcheck?')
+    PaymentMethod_Mailed_check = st.text_input('tPaymentMethod_Mailedcheck?')
     
     Gender_Male = st.text_input('Gender_Male?if male 1 else 0')
     
@@ -125,17 +125,17 @@ def main():
     # creating a button for prediction
     
     if st.button('Churn Result'):
-        diagnosis = churn_prediction([MonthlyCharges, TotalCharges, Phone_Service_Yes,Multiple_Line_Nophone_service,
+        diagnosis = churn_prediction([Monthly_Charges, Total_Charges, Phone_Service_Yes,Multiple_Line_No_phone_service,
                                       Multiple_Line_Yes,Internet_Service_Fiber_optic,Internet_Service_No,
-                                      Online_Security_Nointernetservice, Online_Security_Yes,
-                                      Online_Backup_Nointernetservice, Online_Backup_Yes,
-                                      DeviceProtection_Nointernetservice, DeviceProtection_Yes,
-                                      TechSupport_Nointernetservice, TechSupport_Yes,
-                                      StreamingTV_Nointernetservice, StreamingTV_Yes,
-                                      StreamingMovies_Nointernetservice, StreamingMovies_Yes,
-                                      Contract_One_year, Contract_Twoyear, PaperlessBilling_Yes,
+                                      Online_Security_No_internet_service, Online_Security_Yes,
+                                      Online_Backup_No_internet_service, Online_Backup_Yes,
+                                      DeviceProtection_No_internet_service, DeviceProtection_Yes,
+                                      TechSupport_No_internet_service, TechSupport_Yes,
+                                      StreamingTV_No_internet_service, StreamingTV_Yes,
+                                      StreamingMovies_No_internet_service, StreamingMovies_Yes,
+                                      Contract_One_year, Contract_Two_year, PaperlessBilling_Yes,
                                       PaymentMethod_Creditcard_automatic,
-                                      PaymentMethod_Electronicheck, PaymentMethod_Mailedcheck,
+                                      PaymentMethod_Electronic_check, PaymentMethod_Mailed_check,
                                       Gender_Male, Senior_Citizen_1, Partner_Yes, Dependents_Yes,
                                       tenure_group_13_24, tenure_group_25_36, tenure_group_37_48,
                                       tenure_group_49_60, tenure_group_61_72])
