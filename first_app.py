@@ -21,7 +21,7 @@ def churn_prediction(input_data):
         input_data[feature] = label_encoder.fit_transform([input_data[feature]])
 
     # Convert input data to numpy array
-    input_data_as_numpy_array = np.asarray(list(input_data.values()))
+    input_data_as_numpy_array = np.array(list(input_data.values()), dtype=object)
 
     # Reshape the array as we are predicting for one instance
     input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
