@@ -19,7 +19,7 @@ def churn_prediction(input_data):
     categorical_features = ['PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod', 'Gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenuregroup']
     label_encoder = LabelEncoder()
     for feature in categorical_features:
-        input_data[feature] = label_encoder.transform([input_data[feature]])
+        input_data[feature] = label_encoder.fit_transform([input_data[feature]])
 
     # Convert input data to numpy array
     input_data_as_numpy_array = np.asarray(input_data)
