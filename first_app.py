@@ -68,7 +68,7 @@ def main():
     
     PaperlessBilling = st.selectbox('got paperless billing?', ('Yes', 'No'))
     
-    PaymentMethod = st.selectbox('Do you have any contract?', ('Electronic check','Mailed check','Bank transfer (automatic)', 'Credit card (automatic)'))
+    PaymentMethod = st.selectbox('Select your payment method', ('Electronic check','Mailed check','Bank transfer (automatic)', 'Credit card (automatic)'))
   
     Gender = st.selectbox('Gender', ('Female', 'Male'))
     
