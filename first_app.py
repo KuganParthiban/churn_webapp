@@ -42,16 +42,16 @@ def main():
     
     #getting the input data from the user
     
-    Phone Service = st.text_input('Monthly Charges How Much?')
+    PhoneService = st.text_input('Monthly Charges How Much?')
     
-    Multiple Line = st.text_input('Total Charges how much?')
+    MultipleLine = st.text_input('Total Charges how much?')
     
-    Internet Service = st.text_input('Multiple_Line_No phone service?if no answer 1 else 0')
+    InternetService = st.text_input('Multiple_Line_No phone service?if no answer 1 else 0')
     
-    Online Security = st.text_input('Got online backup?0 or 1')
+    OnlineSecurity = st.text_input('Got online backup?0 or 1')
     
     
-    Online Backup = st.text_input('Internet_Service_Fiber optic?0 or 1')
+    OnlineBackup = st.text_input('Internet_Service_Fiber optic?0 or 1')
     
     DeviceProtection = st.text_input('Internet_Service_No? no is 1 yes 0')
     
@@ -75,13 +75,13 @@ def main():
     
     Gender = st.text_input('StreamingTV_No internet service?')
     
-    Senior Citizen = st.text_input('StreamingTV_Yes?')
+    SeniorCitizen = st.text_input('StreamingTV_Yes?')
     
     Partner = st.text_input('StreamingMovies_Yes?')
     
     Dependents = st.text_input('StreamingMovies_No internet service?')
             
-    tenure group = st.text_input('Contract_One year? if yes 1 no 0')
+    tenuregroup = st.text_input('Contract_One year? if yes 1 no 0')
     
     
     # code for prediction
@@ -93,10 +93,10 @@ def main():
     
     if st.button('Churn Result'):
         diagnosis = churn_prediction(['Phone Service',
- 'Multiple Line',
- 'Internet Service',
- 'Online Security',
- 'Online Backup',
+ 'MultipleLine',
+ 'InternetService',
+ 'OnlineSecurity',
+ 'OnlineBackup',
  'DeviceProtection',
  'TechSupport',
  'StreamingTV',
@@ -107,10 +107,10 @@ def main():
  'MonthlyCharges',
  'TotalCharges',
  'Gender',
- 'Senior Citizen',
+ 'SeniorCitizen',
  'Partner',
  'Dependents',
- 'tenure group'])
+ 'tenuregroup'])
     
     st.success(diagnosis)
     
