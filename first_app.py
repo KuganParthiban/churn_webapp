@@ -42,44 +42,43 @@ def main():
     
     #getting the input data from the user
     
-    MonthlyCharges = st.slider('What is your monthly charges?',0,119,30)
+    MonthlyCharges = st.sidebar.slider('What is your monthly charges?',0,119,30)
     
-    TotalCharges = st.slider('What is your total charges?',0,8685,500)
+    TotalCharges = st.sidebar.slider('What is your total charges?',0,8685,500)
     
-    PhoneService = st.sidebar.selectbox('Do you have phone service?', ('Yes', 'No'))
+    PhoneService = st.selectbox('Do you have phone service?', ('Yes', 'No'))
     
     MultipleLine = st.selectbox('Do you have multiple lines?', ('Yes', 'No', 'No phone service'))
     
     InternetService = st.selectbox('Got internet service?', ('DSL', 'Fiber Optic', 'No'))
     
-    OnlineSecurity = st.selectbox('Got online secirity?', ('Yes', 'No', 'No phone service'))
+    OnlineSecurity = st.selectbox('Got online security?', ('Yes', 'No', 'No internet service'))
     
-    OnlineBackup = st.text_input('Internet_Service_Fiber optic?0 or 1')
+    OnlineBackup = st.selectbox('Got online backup?', ('Yes', 'No', 'No internet service'))
     
-    DeviceProtection = st.text_input('Internet_Service_No? no is 1 yes 0')
+    DeviceProtection = st.selectbox('Got device protection?', ('Yes', 'No', 'No internet service'))
     
-    TechSupport = st.text_input('Online_Security_No internet service?no is 1 yes 0')
+    TechSupport = st.selectbox('Got tech support?', ('Yes', 'No', 'No internet service'))
     
-    StreamingTV = st.text_input('Online_Security_Yes? yes 1 no 0')
+    StreamingTV = st.selectbox('Got streaming tv?', ('Yes', 'No', 'No internet service'))
         
-    StreamingMovies = st.text_input('Online_Backup_No internet service?no is 1')
+    StreamingMovies = st.selectbox('Got streaming movies?', ('Yes', 'No', 'No internet service'))
     
     Contract = st.selectbox('Do you have any contract?', ('Month-to-month', 'One year', 'Two year'))
     
-    PaperlessBilling = st.text_input('DeviceProtection_No internet service?')
+    PaperlessBilling = st.selectbox('got paperless billing?', ('Yes', 'No'))
     
-    PaymentMethod = st.text_input('DeviceProtection_Yes? yes 1 else 0')
+    PaymentMethod = st.selectbox('Do you have any contract?', ('Electronic check','Mailed check','Bank transfer (automatic)', 'Credit card (automatic)'))
   
-    Gender = st.text_input('StreamingTV_No internet service?')
+    Gender = st.selectbox('Gender', ('Female', 'Male'))
     
-    SeniorCitizen = st.text_input('StreamingTV_Yes?')
+    SeniorCitizen = st.selectbox('Are you a senior citizen?', ('Yes', 'No'))
     
-    Partner = st.text_input('StreamingMovies_Yes?')
+    Partner = st.selectbox('Are you a senior citizen?', ('Yes', 'No'))
     
-    Dependents = st.text_input('StreamingMovies_No internet service?')
+    Dependents = st.selectbox('got any dependents?', ('Yes', 'No'))
             
-    tenuregroup = st.text_input('Contract_One year? if yes 1 no 0')
-    
+    tenuregroup = st.selectbox('How long is your tenure?', ('1 - 12', '25 - 36', '37 - 48', '13 - 24', '61 - 72', '49 - 60'))
     
     # code for prediction
     
