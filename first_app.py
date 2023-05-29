@@ -42,14 +42,17 @@ def main():
     
     #getting the input data from the user
     
-    PhoneService = st.text_input('Monthly Charges How Much?')
+    MonthlyCharges = st.slider('What is your monthly charges?',0,119,30)
     
-    MultipleLine = st.text_input('Total Charges how much?')
+    TotalCharges = st.slider('What is your total charges?',0,8685,500)
     
-    InternetService = st.text_input('Multiple_Line_No phone service?if no answer 1 else 0')
+    PhoneService = st.sidebar.selectbox('Do you have phone service?', ('Yes', 'No'))
     
-    OnlineSecurity = st.text_input('Got online backup?0 or 1')
+    MultipleLine = st.selectbox('Do you have multiple lines?', ('Yes', 'No', 'No phone service'))
     
+    InternetService = st.selectbox('Got internet service?', ('DSL', 'Fiber Optic', 'No'))
+    
+    OnlineSecurity = st.selectbox('Got online secirity?', ('Yes', 'No', 'No phone service'))
     
     OnlineBackup = st.text_input('Internet_Service_Fiber optic?0 or 1')
     
@@ -59,7 +62,6 @@ def main():
     
     StreamingTV = st.text_input('Online_Security_Yes? yes 1 no 0')
         
-        
     StreamingMovies = st.text_input('Online_Backup_No internet service?no is 1')
     
     Contract = st.selectbox('Do you have any contract?', ('Month-to-month', 'One year', 'Two year'))
@@ -67,13 +69,7 @@ def main():
     PaperlessBilling = st.text_input('DeviceProtection_No internet service?')
     
     PaymentMethod = st.text_input('DeviceProtection_Yes? yes 1 else 0')
-    
-    MonthlyCharges = st.slider('What is your monthly charges?',0,119,30)
-    
-        
-    TotalCharges = st.slider('What is your total charges?',0,8685,500)
-    
-    
+  
     Gender = st.text_input('StreamingTV_No internet service?')
     
     SeniorCitizen = st.text_input('StreamingTV_Yes?')
