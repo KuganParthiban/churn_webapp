@@ -18,7 +18,7 @@ def churn_prediction(input_data):
     # Convert categorical features using Label Encoding
     for feature in label_encoder_mappings:
         label_encoder = label_encoder_mappings[feature]
-        input_data[feature] = label_encoder.transform([input_data[feature]])
+        input_data[feature] = label_encoder.fit_transform([input_data[feature]])
 
     # Convert input data to numpy array
     input_data_as_numpy_array = np.asarray(list(input_data.values()))
