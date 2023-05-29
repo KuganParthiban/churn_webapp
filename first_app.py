@@ -42,43 +42,24 @@ def main():
     
     #getting the input data from the user
     
-    MonthlyCharges = st.sidebar.slider('What is your monthly charges?',0,119,30)
-    
-    TotalCharges = st.sidebar.slider('What is your total charges?',0,8685,500)
-    
-    PhoneService = st.selectbox('Do you have phone service?', ('Yes', 'No'))
-    
-    MultipleLine = st.selectbox('Do you have multiple lines?', ('Yes', 'No', 'No phone service'))
-    
-    InternetService = st.selectbox('Got internet service?', ('DSL', 'Fiber Optic', 'No'))
-    
-    OnlineSecurity = st.selectbox('Got online security?', ('Yes', 'No', 'No internet service'))
-    
-    OnlineBackup = st.selectbox('Got online backup?', ('Yes', 'No', 'No internet service'))
-    
-    DeviceProtection = st.selectbox('Got device protection?', ('Yes', 'No', 'No internet service'))
-    
-    TechSupport = st.selectbox('Got tech support?', ('Yes', 'No', 'No internet service'))
-    
-    StreamingTV = st.selectbox('Got streaming tv?', ('Yes', 'No', 'No internet service'))
-        
-    StreamingMovies = st.selectbox('Got streaming movies?', ('Yes', 'No', 'No internet service'))
-    
-    Contract = st.selectbox('Do you have any contract?', ('Month-to-month', 'One year', 'Two year'))
-    
-    PaperlessBilling = st.selectbox('got paperless billing?', ('Yes', 'No'))
-    
-    PaymentMethod = st.selectbox('Select your payment method', ('Electronic check','Mailed check','Bank transfer (automatic)', 'Credit card (automatic)'))
-  
-    Gender = st.selectbox('Gender', ('Female', 'Male'))
-    
-    SeniorCitizen = st.selectbox('Are you a senior citizen?', ('Yes', 'No'))
-    
-    Partner = st.selectbox('Are you a senior citizen?', ('Yes', 'No'))
-    
-    Dependents = st.selectbox('got any dependents?', ('Yes', 'No'))
-            
-    tenuregroup = st.selectbox('How long is your tenure?', ('1 - 12', '25 - 36', '37 - 48', '13 - 24', '61 - 72', '49 - 60'))
+    PhoneService = st.selectbox('Do you have phone service?', ('Yes', 'No'), key="phone_service_key")
+    MultipleLine = st.selectbox('Do you have multiple lines?', ('Yes', 'No', 'No phone service'), key="multiple_line_key")
+    InternetService = st.selectbox('Got internet service?', ('DSL', 'Fiber Optic', 'No'), key="internet_service_key")
+    OnlineSecurity = st.selectbox('Got online security?', ('Yes', 'No', 'No internet service'), key="online_security_key")
+    OnlineBackup = st.selectbox('Got online backup?', ('Yes', 'No', 'No internet service'), key="online_backup_key")
+    DeviceProtection = st.selectbox('Got device protection?', ('Yes', 'No', 'No internet service'), key="device_protection_key")
+    TechSupport = st.selectbox('Got tech support?', ('Yes', 'No', 'No internet service'), key="tech_support_key")
+    StreamingTV = st.selectbox('Got streaming TV?', ('Yes', 'No', 'No internet service'), key="streaming_tv_key")
+    StreamingMovies = st.selectbox('Got streaming movies?', ('Yes', 'No', 'No internet service'), key="streaming_movies_key")
+    Contract = st.selectbox('Do you have any contract?', ('Month-to-month', 'One year', 'Two year'), key="contract_key")
+    PaperlessBilling = st.selectbox('Got paperless billing?', ('Yes', 'No'), key="paperless_billing_key")
+    PaymentMethod = st.selectbox('Select your payment method', ('Electronic check', 'Mailed check', 'Bank transfer (automatic)', 'Credit card (automatic)'), key="payment_method_key")
+    Gender = st.selectbox('Gender', ('Female', 'Male'), key="gender_key")
+    SeniorCitizen = st.selectbox('Are you a senior citizen?', ('Yes', 'No'), key="senior_citizen_key")
+    Partner = st.selectbox('Do you have a partner?', ('Yes', 'No'), key="partner_key")
+    Dependents = st.selectbox('Do you have any dependents?', ('Yes', 'No'), key="dependents_key")
+    tenuregroup = st.selectbox('How long is your tenure?', ('1 - 12', '25 - 36', '37 - 48', '13 - 24', '61 - 72', '49 - 60'), key="tenure_group_key")
+
     
     # code for prediction
     
