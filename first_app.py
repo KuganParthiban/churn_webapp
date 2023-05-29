@@ -68,10 +68,11 @@ def main():
     
     PaymentMethod = st.text_input('DeviceProtection_Yes? yes 1 else 0')
     
-    MonthlyCharges = st.text_input('TechSupport_No internet service?')
+    MonthlyCharges = st.slider('What is your monthly charges?',0,118.75,30)
     
         
-    TotalCharges = st.text_input('TechSupport_Yes?')
+    TotalCharges = st.slider('What is your total charges?',0,8684.8,500)
+    
     
     Gender = st.text_input('StreamingTV_No internet service?')
     
