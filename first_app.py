@@ -62,9 +62,9 @@ def main():
         
     StreamingMovies = st.text_input('Online_Backup_No internet service?no is 1')
     
-    Contract = st.text_input('Online_Backup_Yes?yes is 1')
+    Contract = st.selectbox('Do you have any contract?', ('Month-to-month', 'One year', 'Two year'))
     
-    PaperlessBilling = st.text_input('DeviceProtection_No internet service?no is 1')
+    PaperlessBilling = st.text_input('DeviceProtection_No internet service?')
     
     PaymentMethod = st.text_input('DeviceProtection_Yes? yes 1 else 0')
     
