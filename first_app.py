@@ -59,6 +59,9 @@ def main():
     Partner = st.selectbox('Do you have a partner?', ('Yes', 'No'), key="partner_key")
     Dependents = st.selectbox('Do you have any dependents?', ('Yes', 'No'), key="dependents_key")
     tenuregroup = st.selectbox('How long is your tenure?', ('1 - 12', '25 - 36', '37 - 48', '13 - 24', '61 - 72', '49 - 60'), key="tenure_group_key")
+    MonthlyCharges = st.sidebar.slider('What is your monthly charges?', 18,119,70)
+    TotalCharges = st.sidebar.slider('What is your total charges?', 18,8685,1397)
+    
 
     
     # code for prediction
