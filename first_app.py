@@ -3,26 +3,25 @@
 
 # In[1]:
 
-
-#import library
 import numpy as np
 import pickle
 import streamlit as st
-from sklearn.preprocessing import LabelEncoder
 
-#loading the model
-loaded_model = pickle.load(open('churn_predict.pkl','rb'))
+# Loading the model
+loaded_model = pickle.load(open('churn_predict.pkl', 'rb'))
 
-# creating a function for prediction
+# Loading the label encoder mappings
+label_encoder_mappings = pickle.load(open('label_encoder_mappings.pkl', 'rb'))
+
+# Creating a function for prediction
 def churn_prediction(input_data):
     # Convert categorical features using Label Encoding
-    categorical_features = ['PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod', 'Gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenuregroup']
-    label_encoder = LabelEncoder()
-    for feature in categorical_features:
-        input_data[feature] = label_encoder.fit_transform([input_data[feature]])
+    for feature in label_encoder_mappings:
+        label_encoder = label_encoder_mappings[feature]
+        input_data[feature] = label_encoder.transform([input_data[feature]])
 
     # Convert input data to numpy array
-    input_data_as_numpy_array = np.asarray(input_data)
+    input_data_as_numpy_array = np.asarray(list(input_data.values()))
 
     # Reshape the array as we are predicting for one instance
     input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
@@ -33,6 +32,7 @@ def churn_prediction(input_data):
         return 'The person is not churn'
     else:
         return 'The person is churn'
+
 
 def main():
     # giving a title
